@@ -8,9 +8,11 @@ const Header = () => {
   const [menuActive, setMenuActive] = useState(false)
   const handleMenuActivation = () => {
     if (menuActive) {
-      document.querySelector('body').style.overflow = 'hidden auto'
+        document.querySelector('body').style.overflowY = 'visible'
     }else{
-      document.querySelector('body').style.overflow = 'hidden'
+
+        document.querySelector('body').style.height = 'auto'
+        document.querySelector('body').style.overflowY = 'hidden'
     }
     
     setMenuActive(!menuActive)
@@ -61,7 +63,7 @@ const Container = styled.header`
   }
   nav{
     position:absolute;
-    top:var(--height-menu);
+    top:var(--height-menu-s);
     bottom:0;
     right:0;
     left:0;
@@ -69,6 +71,7 @@ const Container = styled.header`
     background-color:rgba(20,20,20,.8);
     transition:var(--trans-menu);
     transform:translateX(100%);
+    z-index:1;
     >div{
       background:#1c1b1d;
       text-transform:uppercase;

@@ -1,40 +1,24 @@
 import Header from '../components/header/Header'
+import Home from './Home'
 
 function Pages(){
   return(
     <>
       <Header />
-      qweqweqwe
-      <h1>qwe</h1>
-      <h1>qwe</h1>
-      <h1>qwe</h1>
-      <h1>qwe</h1>
-      <h1>qwe</h1>
-      <h1>qwe</h1>
-      <h1>qwe</h1>
-      <h1>qwe</h1>
-      <h1>qwe</h1>
-      <h1>qwe</h1>
-      <h1>qwe</h1>
-      <h1>qwe</h1>
-      <h1>qwe</h1>
-      <h1>qwe</h1>
-      <h1>qwe</h1>
-      <h1>qwe</h1>
-      <h1>qwe</h1>
-      <h1>qwe</h1>
-      <h1>qwe</h1>
-      <h1>qwe</h1>
-      <h1>qwe</h1>
-      <h1>qwe</h1>
-      <h1>qwe</h1>
-      <h1>qwe</h1>
-      <h1>qwe</h1>
-      <h1>qwe</h1>
-      <h1>qwe</h1>
-      <h1>qwe</h1>
-      <h1>qwe</h1>
-      <h1>qwe</h1>
+      <Home />
+      <h1>aijoai</h1>
+      <h1>aijoai</h1>
+      <h1>aijoai</h1>
+      <h1>aijoai</h1>
+      <h1>aijoai</h1>
+      <h1>aijoai</h1>
+      <h1>aijoai</h1>
+      <h1>aijoai</h1>
+      <h1>aijoai</h1>
+      <h1>aijoai</h1>
+      <h1>aijoai</h1>
+      <h1>aijoai</h1>
+      <h1>aijoai</h1>
     </>
     )
 }

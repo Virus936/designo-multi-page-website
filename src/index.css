@@ -3,13 +3,17 @@
 :root{
   --trans-menu:.3s;
   --menu-color:white;
-  --height-menu-s:51px;
-  --height-menu-m:81px;
+  --height-menu-s:91px;
+  --height-menu-m:91px;
+  --color-peach:hsl(11, 73%, 66%);
+
 }
 
-body{
-  overflow-x:hidden;
+#root{
+  overflow:hidden auto;
   position:relative;
+}
+body{
 }
 
 *{
