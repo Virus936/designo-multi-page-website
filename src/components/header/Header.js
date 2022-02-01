@@ -1,29 +1,34 @@
-import {useState, useEffect} from 'react'
+import {useState} from 'react'
 import styled from 'styled-components'
 import logo from './logo-dark.png'
 import hamMenu from './ham-menu.png'
 import {size} from '../../settings'
+import { useNavigate } from 'react-router-dom'
 
 const Header = () => {
+  const navigate = useNavigate()
   const [menuActive, setMenuActive] = useState(false)
-  const handleMenuActivation = () => {
-    if (menuActive) {
-        document.querySelector('body').style.overflowY = 'visible'
+  const handleMenuActivation = (bool) => {
+    const bodyStyle = document.querySelector('body').style
+    if (bool) {
+        bodyStyle.height = 'auto'
+        bodyStyle.overflowY = 'hidden'
     }else{
-
-        document.querySelector('body').style.height = 'auto'
-        document.querySelector('body').style.overflowY = 'hidden'
+        bodyStyle.overflowY = 'visible'
     }
     
-    setMenuActive(!menuActive)
+    setMenuActive(bool)
+  }
+  const handleNavigate = goto => {
+    handleMenuActivation(false) ; navigate(goto)
   }
   return <Container>
-    <div className='logo'><img src={logo} alt="" /></div>
-    <div onClick={handleMenuActivation} className="hamburger-toggle"> <img src={hamMenu} alt="" /> </div>
+    <div onClick={()=>handleNavigate('/') } className='logo'><img src={logo} alt="" /></div>
+    <div onClick={()=>handleMenuActivation(!menuActive)} className="hamburger-toggle"> <img src={hamMenu} alt="" /> </div>
     <nav className={menuActive&&'active'}>
-        <div><a href="">our company</a></div>
-        <div><a href="">location</a></div>
-        <div><a href="">contact</a></div>
+      <div><span onClick={()=> handleNavigate('/about')}>our company</span></div>
+      <div><span onClick={()=> handleNavigate('/')}>location</span></div>
+      <div><span onClick={()=> handleNavigate('/')}>contact</span></div>
     </nav>
     </Container>
 }
@@ -36,6 +41,7 @@ const Container = styled.header`
   width:100vw;
   align-items:center;
   .logo{
+    cursor:pointer;
     img{
       width:8em;
 
@@ -78,17 +84,14 @@ const Container = styled.header`
       padding :  0 2em;
       padding-top:2.5em;
       font-size:1.3em;
-      cursor:pointer;
       &:last-of-type{
         padding-bottom:2.5em;
       }
-      a{
-        color:white;
-        text-decoration:none;
+      color:white;
+      span{
         cursor:pointer;
         letter-spacing:.3em;
       }
-    
     }
 
     &.active{
@@ -113,17 +116,10 @@ const Container = styled.header`
         padding-top:0;
         padding :  0 0;
         font-size:1em;
-        cursor:pointer;
         &:last-of-type{
           padding-bottom:0em;
         }
-        a{
-          color:#1c1b1d;
-          text-decoration:none;
-          cursor:pointer;
-          letter-spacing:.2em;
-        }
-
+        color:#1c1b1d;
       }
     }
   }

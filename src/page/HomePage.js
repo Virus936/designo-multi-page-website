@@ -6,7 +6,7 @@ import Qualities from '../components/quality/Qualities'
 
 
 
-const Home = () => {
+const HomePage = () => {
   return <Container>
 
     <Hero
@@ -24,4 +24,4 @@ const Container = styled.main`
   overflow:hidden;
 `
 
-export default Home
+export default HomePage

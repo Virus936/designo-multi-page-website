@@ -1,7 +1,9 @@
 import styled from 'styled-components'
 import logo from './logo-light.png'
 import Contact from './Contact'
+
 import {size} from '../../settings'
+import {  useNavigate } from "react-router-dom";
 
 const socials = [
   "facebook",
@@ -11,12 +13,14 @@ const socials = [
   "youtube",
 ]
 const Social = ({social}) => {
-  return <a href="/">
+  return <a href={`https://${social}.com`}>
     <img src={`${document.location.origin}/asset/socialmedia/icon-${social}.svg`} alt="" />
     </a>
 }
 
 const Footer = () => {
+  const navidate = useNavigate()
+
   return <Container>
       <Contact 
         title="Let's talk about your project"
@@ -26,7 +30,7 @@ const Footer = () => {
       <div className="foot-part">
         <img className="logo-light" src={logo} alt="" />
         <nav>
-          <div>our company</div>
+          <div onClick={() => navidate('/about')}>our company</div>
           <div>location</div>
           <div>contact</div>
         </nav>
@@ -73,8 +77,8 @@ const Container = styled.div`
       align-items:center;
 
       gap:12px;
-      color:white;
       text-transform:uppercase;
+      color:white;
       div{
         cursor:pointer;
         font-size:1.2em;
