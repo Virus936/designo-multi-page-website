@@ -22,9 +22,10 @@ const Container = styled.section`
   text-align:center;
   color:white;
   height:100vh;
+  overflow:hidden;
   @media(min-width:${size.small}){
-    margin:0 calc(max(2em, ( 100vw - 800px )/2 ));
-    border-radius:8px;
+    margin:0 calc(max(2em, ( 100vw - var(--max-width) )/2 ));
+    border-radius:var(--border-radius);
   }
 
   h1{
@@ -50,7 +51,7 @@ const Container = styled.section`
   }
 
   @media(min-width:${size.medium}){
-    border-radius:18px;
+    border-radius:var(--border-radius);
     position:relative;
     display:grid;
     grid-template-columns:50% 50%;
@@ -72,7 +73,7 @@ const Container = styled.section`
       grid-row:1/4;
       align-self:center;
       justify-self:center;
-      width: 400px; 
+      width: 500px; 
       height: 600px;
       object-fit: none;
       

@@ -32,7 +32,7 @@ const Container = styled.header`
   display:flex;
   background-color:var(--menu-color);
   height:var(--height-menu-s);
-  padding:0 calc(max(2em, ( 100vw - 800px )/2 ));
+  padding:0 calc(max(2em, ( 100vw - var(--max-width) )/2 ));
   width:100vw;
   align-items:center;
   .logo{
