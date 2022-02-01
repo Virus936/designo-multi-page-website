@@ -4,7 +4,7 @@ import {size} from '../../settings'
 const SkillItem = ({title, img, to}) => {
   return <Container>
     <img src={`./asset/skill/bigscreen/${img}`}
-        srcset={`./asset/skill/mobile/${img} 450w, ./asset/skill/tablet/${img} 900w, ./asset/skill/bigscreen/${img} 1900w `}         
+        srcSet={`./asset/skill/mobile/${img} 450w, ./asset/skill/tablet/${img} 900w, ./asset/skill/bigscreen/${img} 1900w `}         
 
         alt="" />
     <h1> {title} </h1>

@@ -7,7 +7,7 @@ const AboutHero = () => {
   return <Container>
     <img 
       src={`${srcAbout}${img}`} 
-      srcset={`${srcAbout}mobile/${img} 400w,
+      srcSet={`${srcAbout}mobile/${img} 400w,
               ${srcAbout}tablet/${img} 900w, 
               ${srcAbout}desktop/${img} 1900w, `} 
       alt="" />

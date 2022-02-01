@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import Location from './Location'
+import AboutLocation from './AboutLocation'
 import {size} from '../../settings'
 
 const dests = [
@@ -21,7 +21,7 @@ const dests = [
 ]
 const AboutVoyage = () => {
   return <Container>
-    {dests.map((dest, _index) => <Location key={_index} {...dest} />)}
+    {dests.map((dest, _index) => <AboutLocation key={_index} {...dest} />)}
 
     </Container>
 }

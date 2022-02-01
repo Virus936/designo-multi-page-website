@@ -25,10 +25,10 @@ const Header = () => {
   return <Container>
     <div onClick={()=>handleNavigate('/') } className='logo'><img src={logo} alt="" /></div>
     <div onClick={()=>handleMenuActivation(!menuActive)} className="hamburger-toggle"> <img src={hamMenu} alt="" /> </div>
-    <nav className={menuActive&&'active'}>
+    <nav className={menuActive?'active':''}>
       <div><span onClick={()=> handleNavigate('/about')}>our company</span></div>
-      <div><span onClick={()=> handleNavigate('/')}>location</span></div>
-      <div><span onClick={()=> handleNavigate('/')}>contact</span></div>
+      <div><span onClick={()=> handleNavigate('/location')}>location</span></div>
+      <div><span onClick={()=> handleNavigate('/contact')}>contact</span></div>
     </nav>
     </Container>
 }

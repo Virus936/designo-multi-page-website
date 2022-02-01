@@ -19,7 +19,12 @@ const Social = ({social}) => {
 }
 
 const Footer = () => {
-  const navidate = useNavigate()
+  const navigate = useNavigate()
+  const handleNavigate = goto => {
+    document.body.scrollTop = 0
+    document.documentElement.scrollTop = 0
+    navigate(goto)
+  }
 
   return <Container>
       <Contact 
@@ -28,11 +33,11 @@ const Footer = () => {
     /> 
 
       <div className="foot-part">
-        <img className="logo-light" src={logo} alt="" />
+        <img onClick={() => handleNavigate('/')} className="logo-light" src={logo} alt="" />
         <nav>
-          <div onClick={() => navidate('/about')}>our company</div>
-          <div>location</div>
-          <div>contact</div>
+          <div onClick={() => handleNavigate('/about')}>our company</div>
+          <div onClick={() => handleNavigate('/location')}>location</div>
+          <div onClick={() => handleNavigate('/contact')}>contact</div>
         </nav>
       </div>
       <div className="foot-part">
