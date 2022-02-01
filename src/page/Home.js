@@ -2,6 +2,7 @@ import styled from 'styled-components'
 
 import Hero from '../components/hero/Hero'
 import Skills from '../components/skill/Skills'
+import Qualities from '../components/quality/Qualities'
 
 
 
@@ -15,6 +16,7 @@ const Home = () => {
     />
 
     <Skills />
+    <Qualities />
 
     </Container>
 }
