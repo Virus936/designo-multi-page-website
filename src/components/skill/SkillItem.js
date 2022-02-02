@@ -1,14 +1,21 @@
 import styled from 'styled-components'
 import {size} from '../../settings'
+import {  useNavigate } from "react-router-dom";
 
 const SkillItem = ({title, img, to}) => {
+  const navigate = useNavigate()
+  const handleNavigate = goto => {
+    document.body.scrollTop = 0
+    document.documentElement.scrollTop = 0
+    navigate(goto)
+  }
   return <Container>
     <img src={`./asset/skill/bigscreen/${img}`}
         srcSet={`./asset/skill/mobile/${img} 450w, ./asset/skill/tablet/${img} 900w, ./asset/skill/bigscreen/${img} 1900w `}         
 
         alt="" />
     <h1> {title} </h1>
-    <a href={to}>view projects</a>
+    <span onClick={()=>handleNavigate(to)}>view projects</span>
 
     </Container>
 }
@@ -17,6 +24,7 @@ const Container = styled.article`
   display:flex;
   overflow:hidden;
   flex-direction:column;
+  user-select:none;
 
   justify-content:center;
   align-items:center;
@@ -33,11 +41,12 @@ const Container = styled.article`
     font-size:1em;
     
   }
-  a{
+  span{
     font-weight:700;
     letter-spacing:2px;
     color:white;
     font-size:.8em;
+    cursor:pointer;
     text-decoration:none;
   }
   img{

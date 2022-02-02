@@ -19,6 +19,7 @@ const Container = styled.article`
   }
   p{
     font-size:.8em;
+    margin-top:1em;
   }
   @media(min-width:${size.small}) and ( max-width:${size.medium}){
     display:grid;
@@ -29,7 +30,6 @@ const Container = styled.article`
     }
     p{
       align-self:start;
-      margin-top:1em;
     }
     img{
       grid-row:1/3;

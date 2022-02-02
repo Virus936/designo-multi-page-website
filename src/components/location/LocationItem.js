@@ -44,7 +44,8 @@ const Container = styled.section`
     flex-direction:column;
     gap:22px;
     padding:2em;
-    background:#fdf4f2;
+    background:url('${document.location.origin}/asset/about/svg/bg-pattern-small-circle.svg') #fdf4f2;
+    background-size:contain;
     h1{
       text-transform:capitalize;
       letter-spacing:.4em;
