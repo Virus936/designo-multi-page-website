@@ -7,7 +7,7 @@ const SkillItem = ({title, img, to}) => {
   const handleNavigate = goto => {
     document.body.scrollTop = 0
     document.documentElement.scrollTop = 0
-    navigate(goto)
+    navigate('/design'+goto)
   }
   return <Container>
     <img src={`./asset/skill/bigscreen/${img}`}

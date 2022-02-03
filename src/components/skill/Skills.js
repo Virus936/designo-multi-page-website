@@ -8,17 +8,17 @@ const skills = [
   {
     title:'web design',
     img:'image-web-design.jpg',
-    to:'/'
+    to:'/web'
   },
   {
     title:'app design',
     img:'image-app-design.jpg',
-    to:'/'
+    to:'/app'
   },
   {
     title:'graphic design',
     img:'image-graphic-design.jpg',
-    to:'/'
+    to:'/graphic'
   },
 ]
 

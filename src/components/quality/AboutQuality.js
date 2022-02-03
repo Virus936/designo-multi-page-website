@@ -7,7 +7,7 @@ const AboutQuality = ({title, desc, img}) => {
   return <Container>
     <img
       src={`${srcAbout}desktop/${img}`} 
-      srcset={`${srcAbout}mobile/${img} 400w,
+      srcSet={`${srcAbout}mobile/${img} 400w,
               ${srcAbout}tablet/${img} 900w,
               ${srcAbout}mobile/${img} 1900w,
       `}
