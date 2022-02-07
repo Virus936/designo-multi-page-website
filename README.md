@@ -8,7 +8,7 @@ L'objectif est de progresser en créant un projet frontend réaliste.
 ## Technologie
 
 Ce site est réalisé en ReactJS et j'ai utilisé les packages suivants:
--styled-components  _pour le style css_
--react-router-dom _pour la gerer la navigation fluide entre les différentes pages_
+- styled-components  _pour le style css_
+- react-router-dom _pour la gerer la navigation fluide entre les différentes pages_
 
 piste d'amélioration: ajouter un theme nuit.
