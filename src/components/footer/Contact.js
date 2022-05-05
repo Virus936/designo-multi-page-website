@@ -1,12 +1,14 @@
-import styled from 'styled-components'
+import styled from 'styled-components';
 
-const Contact = ({title, content, to}) => {
-  return <Container>
-    <h1>{title}</h1>
-    <p>{content}</p>
-    {to&& <button>{to}</button> }
+const Contact = ({ title, content, to }) => {
+  return (
+    <Container>
+      <h1>{title}</h1>
+      <p>{content}</p>
+      {to && <button>{to}</button>}
     </Container>
-}
+  );
+};
 const Container = styled.div`
   background:url('${document.location.origin}/asset/svg/bg-pattern-hero-home.svg') var(--color-peach);
   margin:2em calc(max(2em, ( 100vw - var(--max-width) )/2 ));
@@ -24,5 +26,5 @@ const Container = styled.div`
     line-height:2em;
 
   }
-`
-export default Contact
+`;
+export default Contact;

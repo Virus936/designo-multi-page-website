@@ -1,15 +1,17 @@
-import styled from 'styled-components'
-import {size} from '../../settings'
+import styled from 'styled-components';
+import { size } from '../../settings';
 
-const Hero = ({title,desc,img}) => {
-  return <Container>
-    <h1>{title}</h1>
-    <p>{desc}</p>
-    <button>learn more</button>
+const Hero = ({ title, desc, img }) => {
+  return (
+    <Container>
+      <h1>{title}</h1>
+      <p>{desc}</p>
+      <button>learn more</button>
 
-    <img src={img} alt="" />
+      <img src={img} alt="" />
     </Container>
-}
+  );
+};
 
 const Container = styled.section`
   display:flex;
@@ -83,10 +85,10 @@ const Container = styled.section`
       justify-self:start;
     }
   }
-`
+`;
 
 Hero.defaultProps = {
-  title:'default title',
-  desc:'lorem',
-}
-export default Hero
+  title: 'default title',
+  desc: 'lorem',
+};
+export default Hero;

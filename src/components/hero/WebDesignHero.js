@@ -1,12 +1,14 @@
-import styled from 'styled-components'
-import {size} from '../../settings'
+import styled from 'styled-components';
+import { size } from '../../settings';
 
-const WebDesignHero = ({title, desc}) => {
-  return <Container>
-    <h1>{title}</h1>
-    <p>{desc}</p>
-  </Container>
-}
+const WebDesignHero = ({ title, desc }) => {
+  return (
+    <Container>
+      <h1>{title}</h1>
+      <p>{desc}</p>
+    </Container>
+  );
+};
 
 const Container = styled.div`
   background:url('${document.location.origin}/asset/svg/bg-pattern-hero-home.svg') var(--color-peach) ;
@@ -32,6 +34,6 @@ const Container = styled.div`
     border-radius:var(--border-radius);
   }
 
-`
+`;
 
-export default WebDesignHero
+export default WebDesignHero;

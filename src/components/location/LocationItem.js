@@ -1,35 +1,45 @@
-import styled from 'styled-components'
-import {size} from '../../settings'
+import styled from 'styled-components';
+import { size } from '../../settings';
 
-const source = `${document.location.origin}/asset/location/`
-const LocationItem = ({country, designo, adress, town, portable, mail, map}) => {
-
-  return <Container>
-    <img 
-      src={source+'desktop/'+map} 
-      srcSet={`${source+'mobile/'+map} 500w,
-          ${source+'tablet/'+map} 900w,
-          ${source+'desktop/'+map} 1900w,
+const source = `${document.location.origin}/asset/location/`;
+const LocationItem = ({
+  country,
+  designo,
+  adress,
+  town,
+  portable,
+  mail,
+  map,
+}) => {
+  return (
+    <Container>
+      <img
+        src={source + 'desktop/' + map}
+        srcSet={`${source + 'mobile/' + map} 500w,
+          ${source + 'tablet/' + map} 900w,
+          ${source + 'desktop/' + map} 1900w,
 
             `}
-      alt="" />
-    <div>
-      <h1>{country}</h1>
-      <div className="coord">
-        <div >
-          <h2>{designo}</h2>
-          <p>{adress}</p>
-          <p>{town}</p>
-        </div>
-        <div>
-          <h2>contact</h2>
-          <p>P: {portable}</p>
-          <p>M: {mail}</p>
+        alt=""
+      />
+      <div>
+        <h1>{country}</h1>
+        <div className="coord">
+          <div>
+            <h2>{designo}</h2>
+            <p>{adress}</p>
+            <p>{town}</p>
+          </div>
+          <div>
+            <h2>contact</h2>
+            <p>P: {portable}</p>
+            <p>M: {mail}</p>
+          </div>
         </div>
       </div>
-    </div>
     </Container>
-}
+  );
+};
 
 const Container = styled.section`
   display:flex;
@@ -96,6 +106,6 @@ const Container = styled.section`
       }
     }
   }
-`
+`;
 
-export default LocationItem
+export default LocationItem;
